@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
 const SearchParams = () => {
-    const [location, setLocation] = useState("Seattle, WA");
+    const [location, setLocation] = useState("Seattle, WA"); //const
+    //can be used here, cause the whole SearchParams function needs to be 
+    //called again to reassign value there.
     return (
        <div className="search-params">
         <form>

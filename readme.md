@@ -18,6 +18,11 @@
 ## JavaScript rules in React
 - () parantheses in return are telling JS that line is not ended after return keyword, but after closing paranthesis.
 - className keyword is used, cause class in JS is a keyword reserved to... classes.
+
+## Hooks
 - Every event in JavaScript, when happens, it rerenders everything.
 - Because of rerendering cycle, we have to be more explicit about changing value (Hook).
-- useState() returns array of two values. First is current state, and second is a function to change that state.
+- Hook - useState() returns array of two values. First is current state, and second is a function to change that state.
+- Hooks needs to be called in the same order, when we're referencing the same component. That's how react keep track of things.
+- RENDER FUNCTION needs to be fast and stateless!
+- Custom Hooks are bundled from a few other hooks that exists.
