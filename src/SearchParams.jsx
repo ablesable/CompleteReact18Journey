@@ -1,5 +1,6 @@
 import { useState } from 'react';
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
+const breeds = [];
 
 const SearchParams = () => {
     const [location, setLocation] = useState("Seattle, WA"); //const
@@ -7,6 +8,8 @@ const SearchParams = () => {
     //called again to reassign value there.
 
     const [animal, setAnimal] = useState("");
+    const [breed, setBreed] = useState("");
+
     return (
        <div className="search-params">
         <form>
@@ -23,8 +26,11 @@ const SearchParams = () => {
                     id="animal"
                     value={animal}
                     onChange={e=> {
-                        setAnimal(e.target.value)
-                    }}>
+                        setAnimal(e.target.value);
+                        setBreed("");
+                    }}
+                    
+                >
 
                     {ANIMALS.map((animal) => ( //parentheses used cause of implicit return
                         <option key={animal}>{animal}</option>
@@ -32,6 +38,24 @@ const SearchParams = () => {
                     
                 </select>  
             </label>
+
+            <label htmlFor="breed">
+                Breed
+                <select
+                    id="breed"
+                    value={breed}
+                    disabled={breeds.length===0}
+                    onChange={e=> {
+                        setBreed(e.target.value)
+                    }}>
+
+                    {breeds.map((breed) => ( //parentheses used cause of implicit return
+                        <option key={breed}>{breed}</option>
+                    ))}
+                    
+                </select>  
+            </label>
+
 
             <button>Submit</button>
         </form>
