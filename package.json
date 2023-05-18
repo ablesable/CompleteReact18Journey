@@ -1,14 +1,19 @@
 {
   "devDependencies": {
+    "@vitejs/plugin-react": "^2.1.0",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "vite": "^3.1.4"
   },
   "name": "adoptme",
   "description": "- two scripts in the index file (react and react-dom), makes them behave as a global variable. \r - React is an API part of a library, and react-dom is actual renderer on a DOM.\r - App function needs to be called. That's why we add renderer in script tags.\r - JSX is translated into the JS. Then React.createElement is called.\r - Components always has to return markup, the result of React.createElement.",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/ablesable/CompleteReact18Journey/issues"
   },
-  "homepage": "https://github.com/ablesable/CompleteReact18Journey#readme"
+  "homepage": "https://github.com/ablesable/CompleteReact18Journey#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }

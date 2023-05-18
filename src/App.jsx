@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 const Pet = (props) => {
   //one way data flow
   return React.createElement('div', {}, [
@@ -17,7 +20,7 @@ const App = () => {
       React.createElement(Pet, {
         name: 'Ricky',
         animal: 'Dog',
- breed: 'Cocker Spaniel',
+        breed: 'Cocker Spaniel',
       }),
       React.createElement(Pet, {
         name: 'Melman',
@@ -35,4 +38,4 @@ const App = () => {
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
-root.render(React.createElement(App)); //passing an component
+root.render(React.createElement(App)); //passing a component
