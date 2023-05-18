@@ -14,4 +14,10 @@
 - For specific debugging: npm run lint -- --debug (first -- is not passing anything to npm, second -- is for passing to eslint).
 - type="module" in index.html is for vite. We don't use typical JavaScript but ES6 modules.
 - For Eslint to understand jsx/tsx, We need to install plugins: import, react, jsx-a11y.
-  
+
+## JavaScript rules in React
+- () parantheses in return are telling JS that line is not ended after return keyword, but after closing paranthesis.
+- className keyword is used, cause class in JS is a keyword reserved to... classes.
+- Every event in JavaScript, when happens, it rerenders everything.
+- Because of rerendering cycle, we have to be more explicit about changing value (Hook).
+- useState() returns array of two values. First is current state, and second is a function to change that state.
