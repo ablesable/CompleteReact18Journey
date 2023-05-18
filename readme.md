@@ -12,4 +12,6 @@
 - for eslint install additional extension for vscode, just like with prettier. Before script format is for people which doesn't use vscode. For VSCode previous settings needs to be added + format on save setting.
 - add this to scripts: "lint": "eslint \"src/**/*.{js, jsx}\" --quiet"
 - For specific debugging: npm run lint -- --debug (first -- is not passing anything to npm, second -- is for passing to eslint).
+- type="module" in index.html is for vite. We don't use typical JavaScript but ES6 modules.
+- For Eslint to understand jsx/tsx, We need to install plugins: import, react, jsx-a11y.
   
