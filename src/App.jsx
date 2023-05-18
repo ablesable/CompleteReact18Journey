@@ -1,8 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
 
-import Pet from "./Pet.jsx" //by using JSX eslint doesn't understand
-//that I'm using Pet component here.
+import Pet from "./Pet.jsx" 
 
 const App = () => {
   return(
