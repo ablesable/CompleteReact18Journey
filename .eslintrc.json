@@ -1,0 +1,38 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "prettier" //ignorig a lot of rules. prettier needs to be last in extends.
+        
+    ],
+    "rules": {
+        "react/prop-types":0, //prop types is old way of validation without type script
+        "react/react-in-jsx-scope":0 //this means that we don't need to import React anywhere we type in jsx.
+    },
+    "plugins":["react", "import", "jsx-a11y"],
+    "parserOptions": {
+        "ecmaVersions": 2022, //how modern JavaScript we need to check properly.
+        "sourceType": "module", //import and export available in project
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": { //what kind of globals are available
+        "es6": true,
+        "browser": true,
+        "node": true
+    },
+    "settings":{
+        "react":{
+            "version": "detect"
+        },
+        "import/resolver":{
+            "node":{
+                "extensions":[".js", ".jsx"]
+            }
+        }
+
+    }
+}
