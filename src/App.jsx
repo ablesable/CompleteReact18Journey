@@ -1,41 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Pet = (props) => {
-  //one way data flow
-  return React.createElement('div', {}, [
-    React.createElement('h1', {}, props.name),
-    React.createElement('h2', {}, props.animal),
-    React.createElement('h2', {}, props.breed),
-  ]);
-};
+import Pet from "./Pet.jsx" //by using JSX eslint doesn't understand
+//that I'm using Pet component here.
 
 const App = () => {
-  return React.createElement(
-    'div',
-    {}, //null or empty object here
-    [
-      React.createElement('h1', {}, 'Adopt Me!'),
-      //one way data flow - passing as the props to the component
-      React.createElement(Pet, {
-        name: 'Ricky',
-        animal: 'Dog',
-        breed: 'Cocker Spaniel',
-      }),
-      React.createElement(Pet, {
-        name: 'Melman',
-        animal: 'Hamster',
-        breed: 'Roborovsky',
-      }),
-      React.createElement(Pet, {
-        name: 'Bernia',
-        animal: 'Hamster',
-        breed: 'Djungarian',
-      }),
-    ]
-  );
+  return(
+    <div>
+      <h1>Adopt Me!</h1>
+      <Pet name ="Luna" animal = "dog" breed="Havanese" ></Pet>
+      <Pet name ="Luna2" animal = "dog2" breed="Havanese2" ></Pet>
+      <Pet name ="Luna3" animal = "dog3" breed="Havanese3" ></Pet>
+    </div>
+  )
 };
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
-root.render(React.createElement(App)); //passing a component
+// root.render(React.createElement(App)); //passing a component
+root.render(<App></App>);
