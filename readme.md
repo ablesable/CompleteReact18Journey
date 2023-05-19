@@ -31,3 +31,4 @@
 - Custom Hooks are bundled from a few other hooks that exists.
 - Effect Hook is a way to get something from out of component (Typical API request).
 - Second argument in useEffect means that this hook will be called not every time, but just then, when value under this second argument changes.
+- Spread operator should be used in componenets, where we don't do anything with data besides passing somewhere elese. Like Results componenet.
