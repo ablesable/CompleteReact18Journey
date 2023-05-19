@@ -12,7 +12,7 @@ const SearchParams = () => {
 
   useEffect(() => {
     requestPets();
-  }, []);
+  }, []); //works once, initialy and never runs again. In the future only requestPets from onSubmit is called.
 
   async function requestPets() {
     const res = await fetch(`http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`);
