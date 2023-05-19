@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import Pet from './Pet';
+import useBreedList from './useBreedList';
 const ANIMALS = ['bird', 'cat', 'dog', 'rabbit', 'reptile'];
 
 const SearchParams = () => {
-  const breeds = [];
-
   const [location, setLocation] = useState('Seattle, WA'); //const can be used here, cause the whole SearchParams function needs to be called again to reassign value there.
   const [animal, setAnimal] = useState('');
   const [breed, setBreed] = useState('');
   const [pets, setPets] = useState([]);
+  const [breeds] = useBreedList(animal); //now we have it everytime we choose something.
 
   useEffect(() => {
     requestPets();
