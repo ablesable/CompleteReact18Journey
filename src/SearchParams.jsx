@@ -34,7 +34,8 @@ const SearchParams = () => {
         }}
       >
         <LocationSelect location={location} setLocation={setLocation}></LocationSelect>
-        <AnimalSelect ANIMALS={ANIMALS} setAnimal={setAnimal} setBreed={setBreed}></AnimalSelect>
+        <AnimalSelect ANIMALS={ANIMALS} setAnimal={setAnimal} animal={animal} setBreed={setBreed}></AnimalSelect>
+
         <BreedSelect setBreed={setBreed} breed={breed} breeds={breeds}></BreedSelect>
 
         <button>Submit</button>

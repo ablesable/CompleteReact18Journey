@@ -17,3 +17,5 @@ const AnimalSelect = (props) => {
     </label>
   );
 };
+
+export default AnimalSelect;
