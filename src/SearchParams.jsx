@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import useBreedList from './useBreedList';
 import Results from './Results';
+import BreedSelect from './BreedSelect';
+
 const ANIMALS = ['bird', 'cat', 'dog', 'rabbit', 'reptile'];
 
 const SearchParams = () => {
@@ -53,25 +55,7 @@ const SearchParams = () => {
           </select>
         </label>
 
-        <label htmlFor='breed'>
-          Breed
-          <select
-            id='breed'
-            value={breed}
-            disabled={breeds.length === 0}
-            onChange={(e) => {
-              setBreed(e.target.value);
-            }}
-          >
-            {breeds.map(
-              (
-                breed, //parentheses used cause of implicit return
-              ) => (
-                <option key={breed}>{breed}</option>
-              ),
-            )}
-          </select>
-        </label>
+        <BreedSelect setBreed={setBreed} breed={breed} breeds={breeds}></BreedSelect>
 
         <button>Submit</button>
       </form>
