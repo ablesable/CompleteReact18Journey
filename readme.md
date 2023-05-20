@@ -32,3 +32,7 @@
 - Effect Hook is a way to get something from out of component (Typical API request).
 - Second argument in useEffect means that this hook will be called not every time, but just then, when value under this second argument changes.
 - Spread operator should be used in componenets, where we don't do anything with data besides passing somewhere elese. Like Results componenet.
+
+## Routing
+
+- useParams hook can be used in Details page for getting an ID number. Details page is put in the same context (BrowserRouter) as Pet page which puts id to the its route. Makes this possible to happen.
